@@ -66,13 +66,14 @@ track_names = [track['Name'] for track in tracks]
 selected_track = st.selectbox("Select a Karting Track:", track_names)
 
 # Music selection UI
-music_options = ["None", "Track 1"]
+music_options = ["None", "Track 1, Track 2"]
 selected_music = st.selectbox("Select Music Track:", music_options)
 
 # Load music files based on selection
 music_files = {
-    "Track 1": "Music.mp3"
-}
+    "Track 1": "Music.mp3",
+    "Track 2": "spanish.mp3"
+    }
 
 if selected_music in music_files:
     st.audio(music_files[selected_music], format='audio/mp3')
