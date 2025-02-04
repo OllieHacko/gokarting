@@ -6,7 +6,7 @@ from datetime import datetime
 st.set_page_config(page_title="GoKarting Weather 3.5", page_icon="🏎️", layout="centered")
 
 # Load image as a placeholder
-st.image("Untitled1.png", use_column_width=True)
+st.image("Untitled1.png", use_container_width=True)
 
 # List of karting tracks
 tracks = [
@@ -100,7 +100,7 @@ if selected_track:
         # Show track image
         image_path = f"images/{selected_track}.png"  # Ensure images are in the correct directory
         try:
-            st.image(image_path, caption=f"Track: {selected_track}", use_column_width=True)
+            st.image(image_path, caption=f"Track: {selected_track}", use_container_width=True)
         except Exception:
             st.warning(f"No image found for {selected_track}")
 
